@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import FooterList from "./FooterList";
 import { SOCIAL_LINKS, FOOTER_SECTIONS } from "../data/footerData";
 
@@ -9,14 +10,14 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary text-white">
-      <div className="container mx-auto grid gap-10 px-4 py-14 sm:grid-cols-2 md:grid-cols-4 ">
+      <div className="container mx-auto grid gap-10 px-4 py-14 sm:grid-cols-2 md:grid-cols-4 border-b border-white/30">
         <div>
-          <h3 className="mb-4 font-bold tracking-wide text-secondary text-sm md:text-base lg:text-lg xl:text-xl">
+          <h3 className="mb-4 font-bold uppercase tracking-wide text-sm md:text-base lg:text-lg">
             Contact&nbsp;Us
           </h3>
 
           <div className="flex items-center gap-4">
-            {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
+            {SOCIAL_LINKS.map(({ href, icon, label }) => (
               <Link
                 key={href}
                 href={href}
@@ -25,7 +26,7 @@ export default function Footer() {
                 aria-label={label}
                 className="rounded-full p-2 transition-colors hover:bg-[rgba(var(--accent-1)_/_0.2)]"
               >
-                <Icon size={18} />
+                <Icon icon={icon} width="18" height="18" />
               </Link>
             ))}
           </div>
@@ -36,7 +37,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="container mx-auto py-6 border-t border-white/30 text-center text-[10px] sm:text-xs md:text-sm">
+      <div className="container mx-auto py-6 text-center text-[10px] sm:text-xs md:text-sm">
         © Cyncra · {year}. All&nbsp;rights&nbsp;reserved.
       </div>
     </footer>

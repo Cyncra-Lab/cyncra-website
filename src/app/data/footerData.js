@@ -1,16 +1,14 @@
-// components/footerData.js
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  LineChart as XLogo,
-} from "lucide-react";
+import { Icon } from "@iconify/react";
+import facebook from "@iconify/icons-mdi/facebook";
+import instagram from "@iconify/icons-mdi/instagram";
+import linkedin from "@iconify/icons-mdi/linkedin";
+import xLogo from "@iconify/icons-mdi/twitter";
 
 export const SOCIAL_LINKS = [
-  { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
-  { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
-  { href: "https://x.com", icon: XLogo, label: "X / Twitter" },
-  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://facebook.com", icon: facebook, label: "Facebook" },
+  { href: "https://instagram.com", icon: instagram, label: "Instagram" },
+  { href: "https://x.com", icon: xLogo, label: "X / Twitter" },
+  { href: "https://linkedin.com", icon: linkedin, label: "LinkedIn" },
 ];
 
 export const FOOTER_SECTIONS = [
