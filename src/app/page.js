@@ -1,6 +1,15 @@
+import AboutSection from "./components/AboutSection";
+import HeroSection from "./components/HeroSection";
+import ServicesSection from "./components/ServiceSection";
+import StatsSection from "./components/StatsSection";
 
 export default function Home() {
   return (
-    <h1 className="text-4xl font-bold text-center p-4">Welcome to Cyncra</h1>
+    <div>
+      <HeroSection />
+      <StatsSection />
+      <AboutSection />
+      <ServicesSection />
+    </div>
   );
 }
