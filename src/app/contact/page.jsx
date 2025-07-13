@@ -3,6 +3,7 @@ import ContactInfoForm from '../components/ContactInfoForm';
 import ProjectCTA from '../components/Project';
 import MapSection from '../components/MapSection';
 import Newsletter from '../components/Newsletter';
+import Footer from '../components/Footer'
 
 export default function ContactPage() {
     return(
@@ -12,6 +13,7 @@ export default function ContactPage() {
         <ProjectCTA/>
         <MapSection/>
         <Newsletter/>
+        <Footer/>
         </>
     );
 }
