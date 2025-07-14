@@ -54,9 +54,9 @@ export default function ChooseSection() {
                           }`}
             >
               {label.split("\n").map((l) => (
-                <span key={l} className="block">
+                <p key={l} className="block max-w-[138px]">
                   {l}
-                </span>
+                </p>
               ))}
             </div>
           ))}
