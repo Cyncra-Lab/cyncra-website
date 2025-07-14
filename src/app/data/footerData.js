@@ -4,14 +4,14 @@ import instagram from "@iconify/icons-mdi/instagram";
 import linkedin from "@iconify/icons-mdi/linkedin";
 import xLogo from "@iconify/icons-mdi/twitter";
 
-export const SOCIAL_LINKS = [
+export const Social_Links = [
   { href: "https://facebook.com", icon: facebook, label: "Facebook" },
   { href: "https://instagram.com", icon: instagram, label: "Instagram" },
   { href: "https://x.com", icon: xLogo, label: "X / Twitter" },
   { href: "https://linkedin.com", icon: linkedin, label: "LinkedIn" },
 ];
 
-export const FOOTER_SECTIONS = [
+export const Footer_Section = [
   {
     title: "About",
     items: [

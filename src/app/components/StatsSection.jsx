@@ -1,6 +1,6 @@
 "use client";
 
-const STATS = [
+const Stats = [
   {
     value: "150+",
     lines: ["Successful Projects", "Delivered"],
@@ -21,9 +21,9 @@ const STATS = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-background my-12">
+    <section className="bg-background my-20">
       <div className="grid gap-10 px-4 text-center sm:grid-cols-2 md:grid-cols-4">
-        {STATS.map(({ value, lines }) => (
+        {Stats.map(({ value, lines }) => (
           <div key={value}>
             <p className="text-3xl font-bold text-text md:text-6xl ">{value}</p>
             <div className="mt-4 space-y-1 text-sm md:text-xl leading-snug text-text/80">

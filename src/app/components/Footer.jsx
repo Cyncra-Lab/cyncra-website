@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import FooterList from "./FooterList";
-import { SOCIAL_LINKS, FOOTER_SECTIONS } from "../data/footerData";
+import { Social_Links, Footer_Section } from "../data/footerData";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -17,7 +17,7 @@ export default function Footer() {
           </h3>
 
           <div className="flex items-center gap-4">
-            {SOCIAL_LINKS.map(({ href, icon, label }) => (
+            {Social_Links.map(({ href, icon, label }) => (
               <Link
                 key={href}
                 href={href}
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {FOOTER_SECTIONS.map(({ title, items }) => (
+        {Footer_Section.map(({ title, items }) => (
           <FooterList key={title} title={title} items={items} />
         ))}
       </div>

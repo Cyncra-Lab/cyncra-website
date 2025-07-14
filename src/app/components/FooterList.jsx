@@ -10,7 +10,7 @@ export default function FooterList({ title, items }) {
       <ul className="space-y-2 text-xs text-[#B5B5B5] md:text-sm lg:text-base">
         {items.map(({ href, label }) => (
           <li key={href}>
-            <Link href={href} className="transition-colors hover:text-accent-1">
+            <Link href={href} className="transition-colors hover:text-accent-2">
               {label}
             </Link>
           </li>

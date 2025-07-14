@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS } from "../data/navData";
+import { Nav_Links } from "../data/navData";
 
 export default function MobileMenu({ open, onClose }) {
   const pathname = usePathname();
@@ -12,7 +12,6 @@ export default function MobileMenu({ open, onClose }) {
     <AnimatePresence>
       {open && (
         <>
-          {/* backdrop */}
           <motion.div
             className="fixed inset-0 z-40 bg-transparent md:hidden"
             initial={{ opacity: 0 }}
@@ -21,7 +20,6 @@ export default function MobileMenu({ open, onClose }) {
             onClick={onClose}
           />
 
-          {/* drawer */}
           <motion.aside
             className="fixed  right-0 z-50 w-[75vw] max-w-xs bg-surface p-6 md:hidden border-l border-accent-2/40"
             initial={{ x: "100%" }}
@@ -30,7 +28,7 @@ export default function MobileMenu({ open, onClose }) {
             transition={{ type: "spring", stiffness: 260, damping: 25 }}
           >
             <ul className="space-y-6">
-              {NAV_LINKS.map(({ href, label }) => {
+              {Nav_Links.map(({ href, label }) => {
                 const isActive = pathname === href;
                 return (
                   <motion.li

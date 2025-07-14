@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const AVATARS = [
+const Avatars = [
   { src: "/image/avatars1.svg", size: "lg" },
   { src: "/image/avatars2.svg", size: "sm" },
   { src: "/image/avatars3.svg" },
@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
       </p>
 
       <div className="mt-10 flex justify-center gap-3 sm:gap-4">
-        {AVATARS.map(({ src, size }, i) => (
+        {Avatars.map(({ src, size }, i) => (
           <div
             key={src}
             className={`relative overflow-hidden rounded-lg

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
-const SERVICES = [
+const Services = [
   {
     title: "Website Development",
     desc: "Custom-built websites with clean design, fast performance, and modern user experience optimised for desktop and mobile",
@@ -59,7 +59,7 @@ export default function ServicesSection() {
         className="mt-12 grid grid-flow-row auto-rows-[1fr] gap-8
                     sm:grid-cols-2 lg:grid-cols-3"
       >
-        {SERVICES.map(({ title, desc, img, href }) => (
+        {Services.map(({ title, desc, img, href }) => (
           <div
             key={title}
             className="flex h-full min-h-[400px] flex-col overflow-hidden
