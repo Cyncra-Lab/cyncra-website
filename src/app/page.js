@@ -5,7 +5,7 @@ import StatsSection from "./components/StatsSection";
 
 export default function Home() {
   return (
-    <div>
+    <div className="container mx-auto">
       <HeroSection />
       <StatsSection />
       <AboutSection />

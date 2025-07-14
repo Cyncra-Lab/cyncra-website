@@ -46,7 +46,7 @@ const SERVICES = [
 
 export default function ServicesSection() {
   return (
-    <section className="container mx-auto my-20 px-4 text-center">
+    <section className="my-16 text-center">
       <h2 className="text-2xl font-bold text-text md:text-3xl">
         Our&nbsp;Services
       </h2>

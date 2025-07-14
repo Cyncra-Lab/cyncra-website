@@ -21,8 +21,8 @@ const STATS = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-background py-12">
-      <div className="container mx-auto grid gap-10 px-4 text-center sm:grid-cols-2 md:grid-cols-4">
+    <section className="bg-background my-12">
+      <div className="grid gap-10 px-4 text-center sm:grid-cols-2 md:grid-cols-4">
         {STATS.map(({ value, lines }) => (
           <div key={value}>
             <p className="text-3xl font-bold text-text md:text-6xl ">{value}</p>

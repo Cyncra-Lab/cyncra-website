@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function FooterList({ title, items }) {
   return (
     <div>
-      <h3 className="mb-4 text-sm font-bold uppercase tracking-wide text-secondary md:text-base lg:text-lg xl:text-xl">
+      <h3 className="mb-4 text-sm font-bold  tracking-wide text-secondary md:text-base lg:text-lg xl:text-xl">
         {title}
       </h3>
 

@@ -6,14 +6,14 @@ import { Icon } from "@iconify/react";
 
 export default function AboutSection() {
   return (
-    <section className="container mx-auto my-16 px-4">
+    <section className="my-16">
       <div className="grid items-start gap-10  md:grid-cols-2 ">
         <div className="order-2 overflow-hidden rounded-md md:order-1">
           <Image
             src="/image/about.svg"
             alt="Team collaborating over a laptop"
-            width={600}
-            height={400}
+            width={500}
+            height={300}
             className="h-full w-full object-cover"
             priority
           />

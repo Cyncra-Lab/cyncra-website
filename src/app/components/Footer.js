@@ -10,9 +10,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary text-white">
-      <div className="container mx-auto grid gap-10 px-4 py-14 sm:grid-cols-2 md:grid-cols-4 border-b border-white/30">
+      <div className="container mx-auto grid gap-10 px-4 py-14 sm:grid-cols-2 md:grid-cols-4 ">
         <div>
-          <h3 className="mb-4 font-bold uppercase tracking-wide text-sm md:text-base lg:text-lg">
+          <h3 className="mb-4 font-bold tracking-wide text-sm md:text-base lg:text-lg">
             Contact&nbsp;Us
           </h3>
 

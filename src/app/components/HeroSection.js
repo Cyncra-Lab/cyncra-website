@@ -9,7 +9,7 @@ import compassIcon from "@iconify/icons-mdi/compass";
 
 export default function HeroSection() {
   return (
-    <section className="container mx-auto my-12">
+    <section className="my-12">
       <div
         className="relative overflow-hidden rounded-3xl p-8 md:p-16 lg:p-20"
         style={{
