@@ -1,1 +1,13 @@
 @import "tailwindcss";
+@config "../../tailwind.config.mjs";
+
+@theme {
+  --color-text: #0c120c;
+  --color-primary: #02353c;
+  --color-secondary: #e6fafc;
+  --color-accent-1: #ffc857;
+  --color-accent-2: #119da4;
+
+  --color-background: var(--secondary);
+  --color-surface: #ffffff;
+}

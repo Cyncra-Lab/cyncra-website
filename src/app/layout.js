@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import './globals.css';
 import Navbar from './components/Navbar';
@@ -14,10 +15,25 @@ export const metadata = {
   title: 'cyncraWebsite',
   description: 'Cyncra Main Website',
 };
+=======
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import "./globals.css";
+>>>>>>> dev
+
+export const metadata = {
+  title: "Cyncra",
+  description: "Official Cyncra website",
+
+  icons: {
+    icon: "/image/Logo.svg",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <head>
 
         {/* Bootstrap CSS */}
@@ -35,6 +51,12 @@ export default function RootLayout({ children }) {
       <body className={`${oxygen.className} bg-light text-dark`}>
         <Navbar />
         <main>{children}</main>
+=======
+      <body className="flex min-h-screen flex-col bg-background text-text font-oxygen antialiased">
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+>>>>>>> dev
       </body>
     </html>
   );
