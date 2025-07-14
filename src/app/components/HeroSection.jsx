@@ -9,22 +9,22 @@ import compassIcon from "@iconify/icons-mdi/compass";
 
 export default function HeroSection() {
   return (
-    <section className="my-12">
+    <section>
       <div
-        className="relative overflow-hidden rounded-3xl p-8 md:p-16 lg:p-20"
+        className="relative flex items-center mx-auto overflow-hidden rounded-3xl min-h-[76vh] p-8"
         style={{
           backgroundImage:
             "linear-gradient(135deg, var(--color-primary) 30%, var(--color-secondary) 70%, #ffffff 100%)",
         }}
       >
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
           <div>
             <h1
               className="mb-6 font-bold leading-tight text-white
               text-xl  md:text-3xl"
             >
               Building Scalable Digital{" "}
-              <span className="block">Solutions that Drive Growth</span>
+              <p className="block">Solutions that Drive Growth</p>
             </h1>
 
             <p className="mb-10 max-w-xl text-sm text-secondary  md:text-lg">
