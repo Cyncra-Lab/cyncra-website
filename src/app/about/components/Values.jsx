@@ -1,29 +1,29 @@
 'use client';
 
-import { LightbulbIcon, HeartIcon, ShieldIcon, RocketIcon } from "lucide-react";
+import Image from 'next/image';
 
 const valuesData = [
   {
     id: 1,
-    icon: LightbulbIcon,
+    icon: "/aboutImages/idea 1.svg",
     title: "Creative Excellence",
     description: "We think beyond the obvious and deliver remarkable experiences"
   },
   {
     id: 2,
-    icon: HeartIcon,
+    icon: "/aboutImages/Compass 1.svg",
     title: "Purposeful Execution",
     description: "Every action we take is backed by intention and impact"
   },
   {
     id: 3,
-    icon: ShieldIcon,
+    icon: "/aboutImages/agility 1.svg",
     title: "Agility",
     description: "We adapt quickly and respond with smart, scalable solutions"
   },
   {
     id: 4,
-    icon: RocketIcon,
+    icon: "/aboutImages/partnership 1.svg",
     title: "Partnership",
     description: "We grow with our clients, not just for them"
   }
@@ -31,7 +31,7 @@ const valuesData = [
 
 export default function Values() {
   return (
-    <section className="h-[48.0625rem] border text-gray-800 flex justify-center py-10">
+    <section className="h-[48.0625rem] text-gray-800 flex justify-center pt-10">
       <div className="w-[80.625rem] mx-auto">
         <div className="flex flex-col text-center">
         <h2 className="text-3xl font-bold">Our Core Values</h2>
@@ -41,16 +41,23 @@ export default function Values() {
         {/* cards */}
         <div className="flex items-center" style={{ gap: '44px' }}>
             {valuesData.map((value) => {
-                const IconComponent = value.icon;
                 return (
                     <div
                         key={value.id}
-                        className="w-[17.875rem] h-[25.8125rem] p-10 flex flex-col items-center text-center rounded-2xl border"
+                        className="w-[17.875rem] h-[25.8125rem] py-10 px-6 flex flex-col items-center text-center rounded-2xl"
                         style={{
                             background: 'linear-gradient(to bottom, #E6FAFC 9%, #FFFFFF 64%)'
                         }}
                     >
-                        <IconComponent size={50}/>
+                        <div className="w-[60px] h-[60px] bg-white rounded-xl flex items-center justify-center">
+                            <Image
+                                src={value.icon}
+                                alt={value.title}
+                                width={50}
+                                height={50}
+                                className="object-contain"
+                            />
+                        </div>
                         <h2 className="font-bold text-3xl mt-5 mb-14 h-22">{value.title}</h2>
                         <p className="text-2xl text-[#727272] ">{value.description}</p>
                     </div>

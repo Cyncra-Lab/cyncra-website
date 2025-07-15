@@ -12,7 +12,7 @@ export default function Hero() {
                 <div className="flex flex-col items-center gap-[72px]">
                     {/* Text Section */}
                     <div className="w-full h-[236px] flex flex-col justify-center">
-                        <h3 className="font-bold mb-4 text-lg tracking-wide">
+                        <h3 className="mb-4 text-lg tracking-wide">
                             ABOUT US
                         </h3>
                         <h2 className="font-bold text-4xl mb-6">Where Innovation Meets Execution</h2>
@@ -37,13 +37,13 @@ export default function Hero() {
                                     />
                                 </div>
 
-                                <div className="col-span-1 flex justify-center">
+                                <div className="col-span-1 flex justify-center items-center h-[350px]">
                                     <Image
                                         src="/aboutImages/Frame 2147226858.webp"
                                         alt="Team collaboration and strategy"
                                         width={300}
                                         height={250}
-                                        className="w-full h-[250px] object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300 mt-4 md:mt-8"
+                                        className="w-full h-[250px] object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
                                     />
                                 </div>
 
@@ -58,13 +58,13 @@ export default function Hero() {
                                 </div>
 
                                 {/* Image 4 - Shorter */}
-                                <div className="col-span-1 flex justify-center">
+                                <div className="col-span-1 flex justify-center items-center h-[350px]">
                                     <Image
                                         src="/aboutImages/Frame 2147226860.webp"
                                         alt="Business growth and execution"
                                         width={300}
                                         height={250}
-                                        className="w-full h-[250px] object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300 mt-4 md:mt-8"
+                                        className="w-full h-[250px] object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
                                     />
                                 </div>
                             </div>

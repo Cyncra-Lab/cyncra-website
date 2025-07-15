@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Plus, Minus, ArrowRight } from 'lucide-react';
+import { ArrowRight, Minus, Plus } from 'lucide-react';
 
 const faqData = [
   {
@@ -57,12 +57,12 @@ function FaqItemComponent({ faq, isOpen, onToggle }) {
 
       <div
         id={`faq-answer-${faq.id}`}
-        className={`transition-all duration-300 ease-in-out text-2xl text-[#727272] ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`transition-all duration-300 ease-in-out text-2xl  ${
+          isOpen ? 'max-h-96 opacity-100 ' : 'max-h-0 opacity-0'
         } overflow-hidden`}
       >
         <div className="px-6 pb-6">
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-[#727272] leading-relaxed">
             {faq.answer}
           </p>
         </div>
@@ -80,14 +80,14 @@ export default function Faqs() {
   };
 
   return (
-    <section className="min-h-screen border text-gray-800 flex justify-center py-10">
+    <section className="min-h-screen text-gray-800 flex justify-center">
       <div className="w-[80.625rem] mx-auto">
         <div className="flex flex-col text-center">
         <h2 className="text-3xl font-bold">Got questions? <br />We've got answers.</h2>
-        <p className="text-2xl text-[#727272] my-12">We've gathered some of the most ommon questions our clients ask to help you get clarity before we even talk.</p>
+        <p className="text-2xl text-[#727272] my-12">We've gathered some of the most common questions our clients ask to help you get clarity before we even talk.</p>
         </div>
 
-        <div className="w-full mx-auto">
+        <div className="w-full mx-auto mb-18">
           {faqData.map((faq) => (
             <FaqItemComponent
               key={faq.id}
@@ -100,7 +100,7 @@ export default function Faqs() {
 
         {/* Learn More Button */}
         <div className="flex justify-center mt-12">
-          <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#119DA4] text-white font-semibold rounded-full transition-colors duration-200">
+          <button className="inline-flex items-center gap-4 px-8 py-4 bg-[#119DA4] text-white font-semibold rounded-full transition-colors duration-200">
             Learn More
             <ArrowRight size={20} />
           </button>
