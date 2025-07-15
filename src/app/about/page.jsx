@@ -1,6 +1,7 @@
 import Hero from './components/Hero';
 import Mission from './components/Mission';
 import Vision from './components/Vision';
+import Values from './components/Values';
 
 export default function AboutPage() {
     return (
@@ -8,6 +9,7 @@ export default function AboutPage() {
             <Hero />
             <Mission />
             <Vision />
+            <Values />
         </>
     )
 }
