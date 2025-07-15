@@ -57,7 +57,6 @@ export default function Hero() {
                                     />
                                 </div>
 
-                                {/* Image 4 - Shorter */}
                                 <div className="col-span-1 flex justify-center items-center h-[350px]">
                                     <Image
                                         src="/aboutImages/Frame 2147226860.webp"
