@@ -29,7 +29,7 @@
     "tailwind.config.mjs",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/about/components/Faqs.jsx"  ],
   "exclude": [
     "node_modules"
   ]
