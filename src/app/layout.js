@@ -1,14 +1,16 @@
 
 import './globals.css';
-import Navbar from './components/Navbar';
-import { Oxygen } from 'next/font/google';
+ import { Oxygen } from 'next/font/google';
 import Script from 'next/script'; 
+import NavBar from '../components/Navbar';
+import Footer from '../components/Footer'
 
-const oxygen = Oxygen({
-  weight: ['300', '400', '700'],
+
+ const oxygen = Oxygen({
+  weight: [ '400', '700'],
   subsets: ['latin'],
-  display: 'swap',
-});
+  display: 'swap', 
+   });
 
 export const metadata = {
   title: 'cyncraWebsite',
@@ -18,23 +20,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-
-        {/* Bootstrap CSS */}
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-        />
-
-        {/* Bootstrap JS */}
-        <Script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-          strategy="afterInteractive"
-        />
-      </head>
-      <body className={`${oxygen.className} bg-light text-dark`}>
+      <body className={oxygen.className}>
         <Navbar />
-        <main>{children}</main>
+        {children}
+        <Footer />
       </body>
     </html>
   );
