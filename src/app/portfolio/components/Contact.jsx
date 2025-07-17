@@ -94,7 +94,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-[#E6FAFC] p-8 rounded-lg w-full">
+          <div className="bg-[#E6FAFC] p-8 rounded-2xl w-full">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name and Country */}
               <div className="grid grid-cols-2 gap-4">

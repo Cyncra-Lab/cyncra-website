@@ -33,7 +33,7 @@ export default function Hero() {
                                         alt="Innovation and creativity workspace"
                                         width={300}
                                         height={350}
-                                        className="w-full h-[350px] object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
+                                        className="w-full object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
                                     />
                                 </div>
 
@@ -43,7 +43,7 @@ export default function Hero() {
                                         alt="Team collaboration and strategy"
                                         width={300}
                                         height={250}
-                                        className="w-full h-[250px] object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
+                                        className="w-full object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
                                     />
                                 </div>
 
@@ -53,7 +53,7 @@ export default function Hero() {
                                         alt="Technology and digital solutions"
                                         width={300}
                                         height={350}
-                                        className="w-full h-[350px] object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
+                                        className="w-full object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
                                     />
                                 </div>
 
@@ -63,7 +63,7 @@ export default function Hero() {
                                         alt="Business growth and execution"
                                         width={300}
                                         height={250}
-                                        className="w-full h-[250px] object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
+                                        className="w-full object-cover rounded-3xl  hover:shadow-xl transition-shadow duration-300"
                                     />
                                 </div>
                             </div>

@@ -46,10 +46,10 @@ export default function FeaturedWork() {
           {portfolioData.map((project) => (
             <div key={project.id} className="flex flex-col">
               {/* Gray placeholder card */}
-              <div className="bg-gray-300 h-[37.5rem] rounded-3xl mb-4"></div>
+              <div className="bg-gray-300 h-[37.5rem] rounded-3xl"></div>
 
               <div className="flex flex-col items-center justify-center">
-                <p className="text-[#727272] text-2xl mb-4">
+                <p className="text-[#727272] text-2xl my-9">
                   {project.description}
                 </p>
 
