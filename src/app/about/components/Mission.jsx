@@ -36,7 +36,7 @@ export default function Mission() {
           </div>
         </div>
 
-        <div className="flex items- gap-14">
+        <div className="flex items-center gap-14">
             <div className="flex flex-col gap-6 w-[34.0625rem] h-[21.875rem]">
               <span className="text-6xl font-bold text-[#C0BFBF] mb-4">02</span>
               <h3 className="font-bold text-2xl mb">Design that Speaks</h3>
