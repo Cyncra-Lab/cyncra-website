@@ -3,10 +3,10 @@ import { MdOutlineRocketLaunch } from "react-icons/md";
 
 export default function Testimonials() {
   return (
-    <section className="pt-11 text-[#0C120C] flex justify-center h-[51.325rem]">
+    <section className="pt-20 text-[#0C120C] flex justify-center h-[51.325rem]">
       <div className="w-[80.625rem] mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-center text-3xl font-bold mb-6">
+          <h2 className="text-center text-5xl font-bold mb-6">
             Trusted by Visionary Clients
           </h2>
           <p className="text-2xl text-[#727272] font-regular mb-6 tracking-tight leading-[1.4]">

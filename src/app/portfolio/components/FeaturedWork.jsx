@@ -29,7 +29,7 @@ const portfolioData = [
 
 export default function FeaturedWork() {
   return (
-    <section className="min-h-screen pt-11 text-[#0C120C] flex justify-center">
+    <section className="min-h-screen py-20 text-[#0C120C] flex justify-center">
       <div className="w-[80.625rem] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-center text-3xl font-bold mb-6">
@@ -49,12 +49,12 @@ export default function FeaturedWork() {
               <div className="bg-gray-300 h-[37.5rem] rounded-3xl mb-4"></div>
 
               <div className="flex flex-col items-center justify-center">
-                <p className="text-[#727272] text-lg mb-4">
+                <p className="text-[#727272] text-2xl mb-4">
                   {project.description}
                 </p>
 
                 {/* Button */}
-                <button className="bg-[#02353C] text-white py-4 px-8 rounded-2xl font-medium hover:bg-[#119da4] transition-colors duration-300">
+                <button className="bg-[#02353C] text-white py-4 px-8 rounded-2xl text-2xl hover:bg-[#119da4] transition-colors duration-300">
                   View Project
                 </button>
               </div>

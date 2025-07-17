@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="pt-11 text-[#0C120C] flex justify-center h-[51.325rem]">
+    <section className="pt-20 text-[#0C120C] flex justify-center h-[51.325rem]">
       <div className="max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-2 gap-32">
           {/* Left Column - Text Content */}
@@ -108,7 +108,7 @@ export default function Contact() {
                     placeholder="Full Name"
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02353c] focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none"
                   />
                 </div>
                 <div>
@@ -120,7 +120,7 @@ export default function Contact() {
                       name="country"
                       value={formData.country}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02353c] focus:border-transparent outline-none appearance-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none appearance-none text-gray-400"
                     >
                       <option value="">Select</option>
                       <option value="nigeria">Nigeria</option>
@@ -147,7 +147,7 @@ export default function Contact() {
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02353c] focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg  outline-none"
                   />
                 </div>
                 <div>
@@ -176,7 +176,7 @@ export default function Contact() {
                       name="projectType"
                       value={formData.projectType}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none appearance-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none appearance-none text-gray-400"
                     >
                       <option value="">Select Project</option>
                       <option value="web-development">Web Development</option>
@@ -198,7 +198,7 @@ export default function Contact() {
                       name="budgetRange"
                       value={formData.budgetRange}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none appearance-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none appearance-none text-gray-400"
                     >
                       <option value="">Select Range</option>
                       <option value="5k-10k">$5k - $10k</option>
