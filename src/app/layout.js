@@ -1,9 +1,8 @@
 
 import './globals.css';
- import { Oxygen } from 'next/font/google';
-import Script from 'next/script'; 
-import NavBar from '../components/Navbar';
-import Footer from '../components/Footer'
+ import { Oxygen } from 'next/font/google'; 
+import Navbar from './components/Navbar';
+import Footer from './components/Footer'
 
 
  const oxygen = Oxygen({

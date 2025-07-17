@@ -13,7 +13,6 @@ export default function ServicePage(){
             <HowItWorks/>
             <ProjectCTA/>
             <ContactInfoForm/>
-            <Footer/>
         </main>
     );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import {Facebook, instagram, LinkedinInIcon} from 'lucide-react';
+import {FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon} from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -10,10 +10,10 @@ export default function Footer() {
                 <div>
                     <h4 className="text-lg font-bold mb-4">Contact Us </h4>
                         <div className="flex space-x-4 mb-2">
-                            <a href="https://facebook.com" target='_blank' rel="noopener noreferrer" className="hover:text-teal-400"><Facebook size={20}/></a>
-                            <a href="https://twitter.com" target='_blank' rel="noopener noreferrer" className="hover:text-teal-400"><Twitter size={20}/></a>
-                            <a href="https://instagram.com" target='_blank' rel="noopener noreferrer" className="hover:text-teal-400"><Instagram size={20}/></a>
-                            <a href="https://linkedin.com" target='_blank' rel="noopener noreferrer" className="hover:text-teal-400"><LinkedinIn size={20}/></a>
+                            <a href="https://facebook.com" target='_blank' rel="noopener noreferrer" className="hover:text-teal-400"><FacebookIcon size={20}/></a>
+                            <a href="https://twitter.com" target='_blank' rel="noopener noreferrer" className="hover:text-teal-400"><TwitterIcon size={20}/></a>
+                            <a href="https://instagram.com" target='_blank' rel="noopener noreferrer" className="hover:text-teal-400"><InstagramIcon size={20}/></a>
+                            <a href="https://linkedin.com" target='_blank' rel="noopener noreferrer" className="hover:text-teal-400"><LinkedinIcon size={20}/></a>
                         </div>
                 </div>
 

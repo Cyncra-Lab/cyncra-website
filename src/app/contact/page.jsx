@@ -1,4 +1,4 @@
-import Hero from '../components/Hero';
+import ContactHero from '../components/ContactHero';
 import ContactInfoForm from '../components/ContactInfoForm';
 import ProjectCTA from '../components/Project';
 import MapSection from '../components/MapSection';
@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 export default function ContactPage() {
     return(
         <>
-        <Hero/>
+        <ContactHero/>
         <ContactInfoForm/>
         <ProjectCTA/>
         <MapSection/>
