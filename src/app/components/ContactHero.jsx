@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const ContactHero() {
+export default function ContactHero() {
     return (
         <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
 
@@ -18,5 +18,3 @@ const ContactHero() {
         </section>
     );
 };
-
-export default ContactHero;
