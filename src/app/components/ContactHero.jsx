@@ -12,9 +12,9 @@ export default function ContactHero() {
             <div className="absolute inset-0 bg-[#042F2E]/80 z-10 flex items-center justify-center" >
               <div className="text-center text-white px-4">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-2"> </h1>
-                    <p className="text-lg md:text-xl"> We want to hear from you <p/>
-               <div/> 
-           <div/>
+                    <p className="text-lg md:text-xl"> We want to hear from you </p>
+               </div> 
+           </div>
         </section>
     );
 };

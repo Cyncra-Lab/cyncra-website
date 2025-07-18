@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe} from "react-icons/fa";
+// import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe} from "react-icons/fa";
 
 export default function ContactInfoForm(){
     return (
@@ -13,23 +13,23 @@ export default function ContactInfoForm(){
 
                         <div className="space-y-4 text-sm"> 
                             <div className="flex items-center gap-3">
-                                <FaPhoneAlt className="text-[#042F2E]" />
+                              {/*  <FaPhoneAlt className="text-[#042F2E]" /> */}
                                 <span> +2348152026763 </span>
                             </div>
                              <div className="flex items-center gap-3">
-                                <FaPhoneAlt className="text-[#042F2E]" />
+                               {/*  <FaPhoneAlt className="text-[#042F2E]" />  */}
                                 <span>+2348152026763 </span>
                             </div>
                              <div className="flex items-center gap-3">
-                                <FaEnvelope className="text-[#042F2E]" />
+                                {/* <FaEnvelope className="text-[#042F2E]" />  */}
                                 <span>cyncratech@gmail.com </span>
                             </div>
                              <div className="flex items-center gap-3">
-                                <FaMapMarkerAlt className="text-[#042F2E]" />
+                                {/* <FaMapMarkerAlt className="text-[#042F2E]" />  */}
                                 <span>Yaba, Lagos, Nigeria</span>
                             </div>
                              <div className="flex items-center gap-3">
-                                <FaGlobe className="text-[#042F2E]" />
+                                {/* <FaGlobe className="text-[#042F2E]" />  */}
                                 <span>www.cyncra.com</span>
                             </div>
                        </div>
