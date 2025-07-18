@@ -2,22 +2,15 @@
 
 export default function Newsletter(){
     return(
-
-        <section className="py-5 bg-white border-top">
-            <div className="container text-center">
-                <h5 className="mb-3"> Our Newsletter</h5>
-                <p className="mb-4">
-                    Subscribe to get updates on new features, helpful tips, and fresh insughts. </p>
-                    <form action="#" className="row justify-content-center">
-                        <div className="col-md-6">
-                            <input type="email" className="form-control" placeholder="Type your email here" required
+         <section className="bg-white py-10 px-4">
+                <h2 className="text-xl font-semibold text-center mb-4"> Our Newsletter</h2>
+                <p className="text-center text-gray-600 mb-6">
+                    Subscribe to get updates on new features, helpful tips, and fresh insights straight to your inbox. </p>
+                    <form action="#" className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <input type="email" className="px-4 py-2 w-full sm:-1/3 border rounded-xl bg-gray-100 focus:outline-none" placeholder="Type your email here" required
                             />
-                        </div>
-                        <div className="col-md-2 mt-3 mt-md-0">
-                            <button type="submit" className="btn btn-success w-100">Submit</button>
-                        </div>
+                            <button type="submit" className="bg-[#042F2E] text-white px-6 py-2 rounded-xl hover:bg[#064b48] transition">Submit</button>
                     </form>
-            </div>
         </section>
     );
 }
