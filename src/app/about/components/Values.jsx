@@ -31,8 +31,8 @@ const valuesData = [
 
 export default function Values() {
   return (
-    <section className="h-[48.0625rem] text-gray-800 flex justify-center pt-10">
-      <div className="w-[80.625rem] mx-auto">
+    <section className="h-full text-gray-800 flex justify-center pt-11">
+      <div className="w-full px-20 mx-auto">
         <div className="flex flex-col text-center">
         <h2 className="text-3xl font-bold">Our Core Values</h2>
         <p className="text-2xl text-[#727272] my-12">Our values are more than words; they are the foundation of how we think, build, and grow. They guide every project, every partnership, and every decision we make.</p>

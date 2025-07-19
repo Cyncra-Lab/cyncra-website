@@ -45,7 +45,7 @@ function FaqItemComponent({ faq, isOpen, onToggle }) {
           {faq.question}
         </span>
         <div className="flex-shrink-0">
-          <div className="w-8 h-8 rounded-full bg-white border flex items-center justify-center hover:bg-gray-200 transition-colors duration-200">
+          <div className="w-8 h-8 rounded-full bg-white border flex items-center justify-center hover:bg-gray-200 transition-colors duration-200 cursor-pointer">
             {isOpen ? (
               <Minus size={16} className="text-black" />
             ) : (
@@ -80,8 +80,8 @@ export default function Faqs() {
   };
 
   return (
-    <section className="min-h-screen text-gray-800 flex justify-center">
-      <div className="w-[80.625rem] mx-auto">
+    <section className="h-full text-gray-800 flex justify-center pt-11">
+      <div className="w-full px-20 mx-auto">
         <div className="flex flex-col text-center">
         <h2 className="text-3xl font-bold">Got questions? <br />We've got answers.</h2>
         <p className="text-2xl text-[#727272] my-12">We've gathered some of the most common questions our clients ask to help you get clarity before we even talk.</p>
@@ -100,7 +100,7 @@ export default function Faqs() {
 
         {/* Learn More Button */}
         <div className="flex justify-center mt-12">
-          <button className="inline-flex items-center gap-4 px-8 py-4 bg-[#119DA4] text-white font-semibold rounded-full transition-colors duration-200">
+          <button className="inline-flex items-center gap-4 px-8 py-4 bg-[#119DA4] text-white font-semibold rounded-full transition-colors duration-200 cursor-pointer">
             Learn More
             <ArrowRight size={20} />
           </button>

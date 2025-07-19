@@ -3,17 +3,16 @@ import Image from "next/image";
 export default function Vision() {
   return (
     <section className="bg-[#E6FAFC] min-h-screen pt-11 text-[#0C120C] flex justify-center">
-      <div className="w-[80.625rem] mx-auto">
-        <h2 className="text-center text-3xl font-bold mb-6">Where We're Headed</h2>
+      <div className="w-full px-20 mx-auto">
+        <h2 className="text-center text-3xl font-bold mb-15">Where We're Headed</h2>
         <div className="mb-11">
-          <h3 className="text-3xl font-bold mb-2">Our Vision</h3>
+          <h3 className="text-3xl font-bold mb-15">Our Vision</h3>
           <p className="text-2xl text-[#727272] font-regular mb-6 tracking-tight leading-[1.4]">
             To become the trusted digital partner for bold startups and forward-thinking enterprises across Africa and beyond, driving innovation, excellence, and lasting transformation.
           </p>
         </div>
 
-        <div className="flex items-center gap-52 mb-11">
-          <div>
+        <div className="flex items-center justify-between gap-52 my-15">
             <Image
               src="/aboutImages/Frame 2147226968.webp"
               alt="Vision visual"
@@ -21,7 +20,6 @@ export default function Vision() {
               height={350}
               className="rounded-3xl"
             />
-          </div>
           <div className="flex flex-col gap-6 w-[34.0625rem] h-[21.875rem]">
             <h2 className="text-3xl font-bold mb-12">Vision Pillars</h2>
             <span className="text-6xl font-bold text-[#C0BFBF] mb-4">01</span>
@@ -32,7 +30,7 @@ export default function Vision() {
           </div>
         </div>
 
-        <div className="flex items- gap-14">
+        <div className="flex items-center gap-14">
             <div className="flex flex-col gap-6 w-[34.0625rem] h-[21.875rem]">
               <span className="text-6xl font-bold text-[#C0BFBF] mb-4">02</span>
               <h3 className="font-bold text-2xl">Design that Speaks</h3>
