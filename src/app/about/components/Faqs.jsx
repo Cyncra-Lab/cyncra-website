@@ -99,8 +99,8 @@ export default function Faqs() {
         </div>
 
         {/* Learn More Button */}
-        <div className="flex justify-center mt-12">
-          <button className="inline-flex items-center gap-4 px-8 py-4 bg-[#119DA4] text-white font-semibold rounded-full transition-colors duration-200 cursor-pointer">
+        <div className="flex justify-center mt-12 h-[55px]">
+          <button className="inline-flex items-center gap-4 px-8 bg-[#119DA4] text-white font-semibold rounded-full transition-colors duration-200 cursor-pointer">
             Learn More
             <ArrowRight size={20} />
           </button>
