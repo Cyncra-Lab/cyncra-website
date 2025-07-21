@@ -19,7 +19,7 @@ export default function Navbar() {
             <nav className="hidden md:flex space-x-6 items-center"> 
                 <Link href="/" className="hover:text-teal-700"> Home</Link>
                 <Link href="/" className="hover:text-teal-700"> About Us</Link>
-                <Link href="/" className="hover:text-teal-700"> Services</Link>
+                <Link href="/services" className="hover:text-teal-700"> Services</Link>
                 <Link href="/" className="hover:text-teal-700"> Portfolio</Link>
                 <Link href="/contact" className="bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition">Contact Us </Link>
             </nav> 
