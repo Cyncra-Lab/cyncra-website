@@ -11,3 +11,7 @@
   --color-background: var(--secondary);
   --color-surface: #ffffff;
 }
+
+html {
+  scroll-behavior: smooth;
+}
