@@ -30,7 +30,7 @@ const portfolioData = [
 export default function FeaturedWork() {
   return (
     <section className="min-h-screen py-20 text-[#0C120C] flex justify-center">
-      <div className="w-[80.625rem] mx-auto">
+      <div className="w-full px-20 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-center text-3xl font-bold mb-6">
             Featured Work that Delivers Results
@@ -42,7 +42,7 @@ export default function FeaturedWork() {
         </div>
 
         {/* Portfolio Grid - 2 columns, 3 rows */}
-        <div className="grid grid-cols-2" style={{ gap: '5rem' }}>
+        <div className="grid grid-cols-2 gap-20">
           {portfolioData.map((project) => (
             <div key={project.id} className="flex flex-col">
               {/* Gray placeholder card */}
@@ -54,9 +54,12 @@ export default function FeaturedWork() {
                 </p>
 
                 {/* Button */}
-                <button className="bg-[#02353C] text-white py-4 px-8 rounded-2xl text-2xl hover:bg-[#119da4] transition-colors duration-300">
+                <div className="h-[55px]">
+
+                <button className="bg-[#02353C] text-white py-4 px-8 rounded-2xl text-2xl hover:bg-[#119da4] transition-colors duration-300 cursor-pointer">
                   View Project
                 </button>
+                </div>
               </div>
             </div>
           ))}

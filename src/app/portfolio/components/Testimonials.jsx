@@ -4,7 +4,7 @@ import { MdOutlineRocketLaunch } from "react-icons/md";
 export default function Testimonials() {
   return (
     <section className="pt-20 text-[#0C120C] flex justify-center h-[51.325rem]">
-      <div className="w-[80.625rem] mx-auto">
+      <div className="w-full px-20 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-center text-5xl font-bold mb-6">
             Trusted by Visionary Clients
@@ -53,7 +53,7 @@ export default function Testimonials() {
         {/* Call to Action */}
         <div className="text-center flex items-center justify-center gap-2">
           <p className="text-[#727272] text-lg">Ready to write your success story with us</p>
-          <button className="bg-[#E6FAFC] px-8 py-4 rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 flex items-center gap-2">
+          <button className="bg-[#E6FAFC] px-8 py-4 rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 flex items-center gap-2 cursor-pointer">
             Get Started <MdOutlineRocketLaunch />
           </button>
         </div>

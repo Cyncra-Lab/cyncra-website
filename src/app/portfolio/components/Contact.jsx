@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <section className="pt-20 text-[#0C120C] flex justify-center h-[51.325rem]">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="w-full mx-auto px-20">
         <div className="grid grid-cols-2 gap-32">
           {/* Left Column - Text Content */}
           <div className="flex flex-col justify-center items-cnter">
@@ -229,10 +229,10 @@ export default function Contact() {
               </div>
 
               {/* Submit Button */}
-              <div className="flex justify-center">
+              <div className="flex justify-center h-[55px]">
                 <button
                   type="submit"
-                  className="bg-[#02353c] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300"
+                  className="bg-[#02353c] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 cursor-pointer"
                 >
                   Submit Here
                 </button>
