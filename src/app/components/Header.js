@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import { Menu, X } from "lucide-react";
 import MobileMenu from "./MobileMenu";
-import { NAV_LINKS } from "../data/navData";
+import { navLinks } from "../data/navData";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -17,34 +17,35 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-surface/80 backdrop-blur-sm">
-      <nav className="container mx-auto flex items-center justify-between px-4 py-3 md:px-6">
+    <section className="sticky top-0 z-50 w-full bg-surface/80 backdrop-blur-sm shadow">
+      <nav className=" flex items-center justify-between lg:px-20 py-3 !md:py-5 !lg:py-6 px-5">
         <Logo />
 
-        <ul className="hidden gap-8 md:flex">
-          {NAV_LINKS.map(({ href, label }) => {
+        <ul className="hidden gap-3 md:flex">
+          {navLinks.map(({ href, label }) => {
             const isActive = pathname === href;
             return (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={`text-sm font-medium transition-colors ${
-                    isActive ? "text-accent-2" : "text-text hover:text-accent-2"
-                  }`}
-                  aria-current={isActive ? "page" : undefined}
-                >
-                  {label}
-                </Link>
-              </li>
+              <Link
+                href={href}
+                key={href}
+                className={`text-sm font-normal transition-colors px-6 py-3 lg:text-lg ${
+                  isActive
+                    ? "text-[#02353C] !font-bold"
+                    : "text-text hover:text-accent-2"
+                }`}
+                aria-current={isActive ? "page" : undefined}
+              >
+                {label}
+              </Link>
             );
           })}
         </ul>
 
         <Link
           href="/contact"
-          className="hidden rounded-full bg-accent-2 px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:inline-block"
+          className="hidden rounded-full bg-accent-2 px-10 py-4 h-14 text-lg font-bold cursor-pointer text-white transition-opacity hover:opacity-90 md:flex justify-center items-center"
         >
-          Contact&nbsp;Us
+          Contact Us
         </Link>
 
         <button
@@ -57,6 +58,6 @@ export default function Header() {
       </nav>
 
       <MobileMenu open={open} onClose={() => setOpen(false)} />
-    </header>
+    </section>
   );
 }
