@@ -1,19 +1,15 @@
 "use client";
 import Image from "next/image";
 import { MdOutlineRocketLaunch } from "react-icons/md";
-import frame1 from "../../../assets/images/Frame1.svg";
 
 export default function Testimonials() {
   return (
-    <section className="pt-20 text-[#0C120C] flex justify-center h-[51.325rem]">
+    <section className="p-20 text-[#0C120C] flex justify-center h-auto">
       <div className="w-full px-20 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-center text-5xl font-bold mb-6">
-            Trusted by Visionary Clients
-          </h2>
-          <p className="text-2xl text-[#727272] font-regular mb-6 tracking-tight leading-[1.4]">
-            We deliver more than projects, we build lasting partnerships. See
-            what our clients say about working with Cyncra
+          <h2 className="text-center text-5xl font-bold mb-2">Testimonials</h2>
+          <p className="text-2xl text-[#727272] font-regular mb-11 tracking-wider leading-[1.4]">
+            Hear what Our Clients are saying about us
           </p>
         </div>
 
@@ -154,22 +150,24 @@ export default function Testimonials() {
           <h3 className="text-2xl font-bold mb-2">
             Tobi Bamidele, Founder, QuickCart NG
           </h3>
-          <p className="text-[#727272] text-2xl leading-relaxed w-[57.3125rem] mx-auto">
+          <p className="text-[#727272] text-2xl leading-relaxed px-70 mb-31">
             "Working with Cyncra felt like having an in-house tech team. They
-            didn't just build our
-            <br />
-            app, they challenged our thinking, improved the UX, and delivered
-            ahead of <br /> schedule."
+            didn't just build our app, they challenged our thinking, improved
+            the UX, and delivered ahead of schedule."
           </p>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center flex items-center justify-center gap-2">
-          <p className="text-[#727272] text-lg">
-            Ready to write your success story with us
+        <div className="text-center flex flex-col items-center justify-center gap-2">
+          <h1 className="font-bold mb-6 text-2xl">
+            Ready to bring your digital ideas to life?
+          </h1>
+          <p className="text-[#727272] text-2xl mb-11">
+            Let’s help you build, launch, and scale with confidence.
           </p>
-          <button className="bg-[#E6FAFC] px-8 py-4 rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 flex items-center gap-2 cursor-pointer">
-            Get Started <MdOutlineRocketLaunch />
+          <button className="bg-[#02353C] text-white px-8 h-14 rounded-2xl font-bold text-lg hover:bg-[#119da4] transition-colors duration-300 flex items-center gap-3 cursor-pointer">
+            Book a Free Call{" "}
+            <Image src="/call.svg" width={24} height={24} alt="call" />
           </button>
         </div>
       </div>

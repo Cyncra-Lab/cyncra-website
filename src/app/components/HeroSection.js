@@ -6,28 +6,29 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import rocketIcon from "@iconify/icons-mdi/rocket-launch";
 import compassIcon from "@iconify/icons-mdi/compass";
+import StatsSection from "./StatsSection";
 
 export default function HeroSection() {
   return (
-    <section className="my-12">
+    <section className="pt-11 px-20 h-svh">
       <div
-        className="relative overflow-hidden rounded-3xl p-8 md:p-16 lg:p-20"
+        className="relative overflow-hidden rounded-3xl py-12 px-14 w-full mb-11"
         style={{
           backgroundImage:
             "linear-gradient(135deg, var(--color-primary) 30%, var(--color-secondary) 70%, #ffffff 100%)",
         }}
       >
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="pt-12 w-full">
             <h1
-              className="mb-6 font-bold leading-tight text-white
-              text-xl  md:text-3xl"
+              className=" font-bold leading-tight text-white
+              text-xl md:text-5xl mb-9"
             >
               Building Scalable Digital{" "}
               <span className="block">Solutions that Drive Growth</span>
             </h1>
 
-            <p className="mb-10 max-w-xl text-sm text-secondary  md:text-lg">
+            <p className="mb-10 text-lg text-secondary  md:text-lg">
               At Cyncra Technologies, we design, develop, and deliver custom
               websites and mobile applications that power startups, scale-ups,
               and enterprises. Whether you’re launching a new product or
@@ -38,9 +39,9 @@ export default function HeroSection() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-secondary px-6 py-3 font-semibold text-text shadow hover:opacity-90"
+                className=" gap-2 rounded-xl bg-secondary w-[195px] flex justify-center items-center h-14 font-semibold text-text shadow hover:opacity-90"
               >
-                Get&nbsp;Started
+                Get Started
                 <Icon
                   icon={rocketIcon}
                   width="18"
@@ -51,9 +52,9 @@ export default function HeroSection() {
 
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-md border border-secondary px-6 py-3 font-semibold text-secondarry hover:bg-white/10"
+                className="flex justify-center items-center h-14 gap-2 rounded-xl border border-secondary px-6 py-3 font-semibold text-secondary hover:bg-white/10"
               >
-                Explore&nbsp;Our&nbsp;Services
+                Explore Our Services
                 <Icon
                   icon="mdi:compass"
                   width="18"
@@ -64,7 +65,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="mx-auto max-w-md lg:max-w-none">
+          <div className="w-full">
             <div className="overflow-hidden rounded-2xl">
               <Image
                 src="/image/Hero.svg"
@@ -78,6 +79,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <StatsSection />
     </section>
   );
 }

@@ -1,15 +1,13 @@
-import './globals.css';
-import { Oxygen } from 'next/font/google';
+import "./globals.css";
 import Header from "./components/Header";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
+import { Oxygen } from "next/font/google";
 
-
- const oxygen = Oxygen({
-  weight: [ '400', '700'],
-  subsets: ['latin'],
-  display: 'swap', 
-   });
+const oxygen = Oxygen({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Cyncra",
@@ -23,7 +21,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={oxygen.className}>
       <body className="flex min-h-screen flex-col bg-background text-text antialiased">
-        <Navbar />
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

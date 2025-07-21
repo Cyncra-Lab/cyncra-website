@@ -9,11 +9,12 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-red-500 text-white h-auto">
+      <h1 className="text-red-500">Hello World</h1>
       <div className="container mx-auto grid gap-10 px-4 py-14 sm:grid-cols-2 md:grid-cols-4 ">
         <div>
           <h3 className="mb-4 font-bold tracking-wide text-sm md:text-base lg:text-lg">
-            Contact&nbsp;Us
+            Contact Us
           </h3>
 
           <div className="flex items-center gap-4">
