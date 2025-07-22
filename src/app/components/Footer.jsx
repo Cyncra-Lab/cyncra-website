@@ -1,6 +1,6 @@
 'use client';
 
-import {FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon} from 'lucide-react';
+import {FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon} from 'lucide-react'; // import from lucide react
 
 export default function Footer() {
     return (
