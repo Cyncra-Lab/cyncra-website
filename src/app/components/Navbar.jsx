@@ -1,12 +1,54 @@
 "use client";
 
+<<<<<<< HEAD
+import Link from 'next/link';
+import Image from 'next/image';
+import {useState} from 'react';
+import { Menu, X} from 'lucide-react';
+=======
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+>>>>>>> a7c7035782949f50327d7b55f76149c4681661af
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+<<<<<<< HEAD
+   return (
+    <header className="sticky top-0 z-50 bg-white shadow-md">
+       <div className="max-w-7xl mx-auto py-4 px-4 flex items-center justify-between">
+                <Link href="/" className="flex items-center space-x-2"> 
+                    <Image src="/images/logo.png" alt="Cyncra Logo" width={40} height={40} priority />
+                    <span className="sr-only"> Cyncra Home</span>
+                </Link>
+
+            <nav className="hidden md:flex space-x-6 items-center"> 
+                <Link href="/" className="hover:text-teal-700"> Home</Link>
+                <Link href="/" className="hover:text-teal-700"> About Us</Link>
+                <Link href="/services" className="hover:text-teal-700"> Services</Link>
+                <Link href="/" className="hover:text-teal-700"> Portfolio</Link>
+                <Link href="/contact" className="bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition">Contact Us </Link>
+            </nav> 
+
+                <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </button>
+       </div>
+
+       {isOpen && (
+        <div className="md:hidden px-4 pb-4 space-y-2 bg-white">
+            <Link href="/" className="block"> Home</Link>
+            <Link href="/" className="block"> About Us</Link>
+            <Link href="/services" className="block"> Services</Link>
+            <Link href="/" className="block"> Portfolio</Link>
+            <Link href="/contact" className="inline-block bg-teal-600 text-white px-4 py-2 rounded-full mt-2" > Contact Us </Link>
+        </div>
+       )}
+    </header>
+   );
+} 
+=======
   return (
     <nav className="navbar navbar-expand-lg navbar-light !bg-red-400 shadow-sm py-7 px-20 h-20">
       <div className="container">
@@ -66,3 +108,4 @@ export default function Navbar() {
     </nav>
   );
 }
+>>>>>>> a7c7035782949f50327d7b55f76149c4681661af
