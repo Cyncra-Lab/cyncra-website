@@ -22,7 +22,7 @@ export default function Testimonials() {
           {/* Left group - 2x2 grid */}
           {/* Remember to create variable for these repetitive classes */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="w-25 h-25 rounded-2xl">
+            <div className="w-25 h-25 rounded-2xlhidden lg:block">
               <Image
                 src="/images/Frame1.svg"
                 alt="Client 1"
@@ -60,9 +60,9 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Center group - 3 */}
+          {/* Center group - 3 * 3 */}
           <div className="flex items-center gap-6">
-            <div className="w-25 h-25 rounded-2xl">
+            <div className="w-25 h-25 rounded-2xl hidden">
               <Image
                 src="/images/Frame5.svg"
                 alt="Client 1"
@@ -71,7 +71,7 @@ export default function Testimonials() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-25 h-25 rounded-2xl">
+            <div className="w-25 h-25 rounded-2xl hidden lg:block">
               <Image
                 src="/images/Frame6.svg"
                 alt="Client 1"
@@ -89,7 +89,7 @@ export default function Testimonials() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-25 h-25 rounded-2xl">
+            <div className="w-25 h-25 rounded-2xl hidden lg:block">
               <Image
                 src="/images/Frame8.svg"
                 alt="Client 1"
@@ -98,7 +98,7 @@ export default function Testimonials() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-25 h-25 rounded-2xl">
+            <div className="w-25 h-25 rounded-2xl hidden lg:block">
               <Image
                 src="/images/Frame9.svg"
                 alt="Client 1"
@@ -155,7 +155,7 @@ export default function Testimonials() {
           <h3 className="text-2xl font-bold mb-2">
             Tobi Bamidele, Founder, QuickCart NG
           </h3>
-          <p className="text-[#727272] text-2xl leading-relaxed w-[57.3125rem] mx-auto">
+          <p className="text-[#727272] text-2xl leading-relaxed lg:w-[57.3125rem] mx-auto hidden lg:inline">
             "Working with Cyncra felt like having an in-house tech team. They
             didn't just build our
             <br />
@@ -168,7 +168,7 @@ export default function Testimonials() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center flex items-center justify-center gap-2">
+        <div className="text-center flex flex-col lg:flex-row items-center justify-center gap-2">
           <p className="text-[#727272] text-lg">
             Ready to write your success story with us
           </p>

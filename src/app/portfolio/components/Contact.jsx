@@ -30,10 +30,10 @@ export default function Contact() {
 
   return (
     <section className="pt-20 text-[#0C120C] flex justify-center lg:h-[51.325rem]">
-      <div className="w-full mx-auto px-8 lg:px-20">
+      <div className="w-full mx-auto lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
           {/* Left Column - Text Content */}
-          <div className="flex flex-col justify-center items-cnter">
+          <div className="flex flex-col justify-center px-8 ">
             <div>
               <h2 className="text-2xl lg:text-4xl text-black mb-4 lg:mb-10">
                 Let's Create Something Great Together
