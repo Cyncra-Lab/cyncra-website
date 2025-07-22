@@ -29,13 +29,13 @@ export default function Contact() {
   };
 
   return (
-    <section className="pt-20 text-[#0C120C] flex justify-center h-[51.325rem]">
-      <div className="w-full mx-auto px-20">
-        <div className="grid grid-cols-2 gap-32">
+    <section className="pt-20 text-[#0C120C] flex justify-center lg:h-[51.325rem]">
+      <div className="w-full mx-auto lg:px-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
           {/* Left Column - Text Content */}
-          <div className="flex flex-col justify-center items-cnter">
+          <div className="flex flex-col justify-center px-8 ">
             <div>
-              <h2 className="text-4xl text-black mb-10">
+              <h2 className="text-2xl lg:text-4xl text-black mb-4 lg:mb-10">
                 Let's Create Something Great Together
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-10">
@@ -50,7 +50,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Information */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="flex items-center space-x-3">
                 <div className="w-5 h-5 text-gray-600">
                   <FaPhone />
@@ -229,10 +229,10 @@ export default function Contact() {
               </div>
 
               {/* Submit Button */}
-              <div className="flex justify-center h-[55px]">
+              <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="bg-[#02353c] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 cursor-pointer"
+                  className="bg-[#02353c] text-white px-8 h-[55px] rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 cursor-pointer"
                 >
                   Submit Here
                 </button>
