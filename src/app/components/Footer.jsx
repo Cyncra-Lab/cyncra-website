@@ -19,7 +19,9 @@ export default function Footer() {
       <div className="px-5 lg:px-20 w-full">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 py-4 pb-4 border-bottom border-secondary w-full">
           <div className="col-span-1">
-            <h5 className="font-bold text-2xl mb-4 lg:mb-8">Contact Us </h5>
+            <h5 className="font-bold text-xl lg:text-2xl mb-4 lg:mb-8">
+              Contact Us{" "}
+            </h5>
             <div className="flex gap-2 lg:gap-3">
               <a href="#" className="text-white">
                 <Image src={facebook} alt="Facebook" width={36} height={27} />
@@ -36,9 +38,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-span-1">
-            <h5 className="font-bold text-2xl mb-6">About</h5>
-            <ul className="list-unstyled]">
+          <div className="col-span-1 text-right lg:text-left">
+            <h5 className="font-bold text-xl lg:text-2xl mb-6">About</h5>
+            <ul className="list-unstyled text-sm lg:text-base">
               <li className="mb-2">
                 <a href="#" className="text-[#B5B5B5] text-decoration-none">
                   Our Story
@@ -63,8 +65,8 @@ export default function Footer() {
           </div>
 
           <div className="col-span-1">
-            <h5 className="font-bold text-2xl mb-3">Services</h5>
-            <ul className="list-unstyled">
+            <h5 className="font-bold text-xl lg:text-2xl mb-3">Services</h5>
+            <ul className="list-unstyled text-sm lg:text-base">
               <li className="mb-2">
                 <a href="#" className="text-[#B5B5B5] text-decoration-none">
                   Product Strategy
@@ -83,9 +85,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-1">
-            <h5 className="font-bold text-2xl mb-3">Support</h5>
-            <ul className="list-unstyled">
+          <div className="col-span-1 text-right lg:text-left">
+            <h5 className="font-bold text-xl lg:text-2xl mb-3">Support</h5>
+            <ul className="list-unstyled text-sm lg:text-base">
               <li className="mb-2">
                 <a href="#" className="text-[#B5B5B5] text-decoration-none">
                   Help Center

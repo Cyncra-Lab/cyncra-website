@@ -11,10 +11,10 @@ const points = [
 
 export default function ChooseSection() {
   return (
-    <section className="bg-[var(--color-secondary)] p-20">
+    <section className="bg-[var(--color-secondary)] py-5 px-0 lg:p-20">
       <div className="grid gap-10 lg:gap-46 px-4 md:grid-cols-2">
         <div>
-          <h2 className="mb-11 text-2xl font-bold md:text-3xl">
+          <h2 className="mb-8 lg:mb-11 text-2xl font-bold md:text-3xl text-center lg:text-left">
             Why Freelancers and
             <br />
             Entrepreneurs Choose Cyncra
@@ -28,24 +28,24 @@ export default function ChooseSection() {
             digital landscape.
           </p>
 
-          <p className="mb-10 font-bold text-2xl">
+          <p className="mb-10 font-bold text-xl lg:text-2xl">
             Crafted with strategy, design, and code
           </p>
 
           <Link
             href="/portfolio"
-            className="flex justify-center items-center rounded-xl bg-primary px-6 py-3 text-lg font-bold
-                       text-secondary transition hover:bg-accent-2 h-14 w-[205px]"
+            className="flex justify-center items-center rounded-xl bg-primary px-6 py-3 text-base lg:text-lg font-bold
+                       text-secondary transition hover:bg-accent-2 h-14 w-full lg:w-[205px]"
           >
             Explore our work
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 py-12 h-auto w-full md:h-95 md:w-109 lg:h-120 lg:w-120 ml-auto">
+        <div className="grid grid-cols-2 gap-6 py-10 lg:py-12 h-auto w-full md:h-95 md:w-109 lg:h-120 lg:w-120 ml-auto">
           {points.map(({ label, dark }) => (
             <div
               key={label}
-              className={`flex min-h-[140px] h-full items-center justify-center rounded-3xl px-11 py-16
+              className={`flex min-h-[140px] h-full items-center justify-center rounded-3xl px-5 lg:px-11 py-16
               text-center  sm:text-sm md:text-lg font-bold leading-snug tracking-wide
                           ${
                             dark
