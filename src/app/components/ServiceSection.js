@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
-const SERVICES = [
+const services = [
   {
     title: "Website Development",
     desc: "Custom-built websites with clean design, fast performance, and modern user experience optimised for desktop and mobile",
@@ -46,25 +46,25 @@ const SERVICES = [
 
 export default function ServicesSection() {
   return (
-    <section className="my-16 text-center">
-      <h2 className="text-2xl font-bold text-text md:text-3xl">
-        Our&nbsp;Services
+    <section className=" text-center px-20 py-25">
+      <h2 className="text-xl font-bold text-text lg:text-3xl mb-5">
+        Our Services
       </h2>
-      <p className="mx-auto mt-3 max-w-xl text-sm text-text/80 md:text-base">
+      <p className="text-xl text-[#727272] lg:text-2xl">
         From strategy to execution, we offer full-stack development and digital
         solutions tailored to your goals.
       </p>
 
       <div
-        className="mt-12 grid grid-flow-row auto-rows-[1fr] gap-8
-                    sm:grid-cols-2 lg:grid-cols-3"
+        className="mt-12 grid grid-flow-row auto-rows-[1fr] gap-y-10
+                    sm:grid-cols-2 lg:grid-cols-3 px-20"
       >
-        {SERVICES.map(({ title, desc, img, href }) => (
+        {services.map(({ title, desc, img, href }) => (
           <div
             key={title}
-            className="flex h-full min-h-[400px] flex-col overflow-hidden
-                     rounded-lg bg-[#F5FCFC] shadow-sm transition
-                     hover:shadow-md"
+            className="flex h-full min-h-[400px] w-full md:w-[330px] lg:w-[360px] flex-col overflow-hidden
+                     rounded-3xl bg-[#F5FCFC] shadow-sm transition
+                     hover:shadow-md hover:scale-105 duration-300"
           >
             <Image
               src={img}
@@ -75,18 +75,18 @@ export default function ServicesSection() {
             />
 
             <div className="flex flex-1 flex-col p-6">
-              <h3 className="mb-2 text-lg font-semibold text-text">{title}</h3>
+              <h3 className="mb-4 text-2xl font-bold text-text">{title}</h3>
 
-              <p className="mb-6 line-clamp-[4] text-sm leading-relaxed text-text/80">
+              <p className="mb-4 text-lg px-3 h-[125px] leading-relaxed text-text/80">
                 {desc}
               </p>
 
               <Link
                 href={href}
-                className="mt-auto inline-flex items-center justify-center gap-1 text-sm font-semibold
+                className="mt-auto inline-flex items-center justify-center gap-1 text-lg font-bold
                          text-primary transition-colors hover:text-accent-2"
               >
-                Learn&nbsp;More
+                Learn More
                 <Icon icon="ic:outline-arrow-forward" width="16" height="16" />
               </Link>
             </div>

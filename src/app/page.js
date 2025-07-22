@@ -2,18 +2,18 @@ import AboutSection from "./components/AboutSection";
 import ChooseSection from "./components/ChooseSection";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServiceSection";
-import StatsSection from "./components/StatsSection";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
     <>
-      <div className="container mx-auto">
+      <div className="w-full">
         <HeroSection />
-        <StatsSection />
         <AboutSection />
         <ServicesSection />
+        <ChooseSection />
+        <Testimonials />
       </div>
-      <ChooseSection />
     </>
   );
 }

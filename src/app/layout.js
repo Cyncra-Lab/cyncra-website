@@ -1,12 +1,12 @@
-import './globals.css';
+import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Oxygen } from 'next/font/google';
+import { Oxygen } from "next/font/google";
 
 const oxygen = Oxygen({
-  weight: ['300', '400', '700'],
-  subsets: ['latin'],
-  display: 'swap',
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
