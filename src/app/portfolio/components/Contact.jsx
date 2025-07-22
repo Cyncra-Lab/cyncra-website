@@ -229,10 +229,10 @@ export default function Contact() {
               </div>
 
               {/* Submit Button */}
-              <div className="flex justify-center h-[55px]">
+              <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="bg-[#02353c] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 cursor-pointer"
+                  className="bg-[#02353c] text-white px-8 h-[55px] rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 cursor-pointer"
                 >
                   Submit Here
                 </button>

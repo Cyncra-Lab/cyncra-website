@@ -54,12 +54,10 @@ export default function FeaturedWork() {
                 </p>
 
                 {/* Button */}
-                <div className="h-[55px]">
 
-                <button className="bg-[#02353C] text-white py-4 px-8 rounded-2xl text-2xl hover:bg-[#119da4] transition-colors duration-300 cursor-pointer">
+                <button className="bg-[#02353C] text-white h-[55px] px-8 rounded-2xl text-2xl hover:bg-[#119da4] transition-colors duration-300 cursor-pointer">
                   View Project
                 </button>
-                </div>
               </div>
             </div>
           ))}

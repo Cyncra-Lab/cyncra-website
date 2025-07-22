@@ -41,7 +41,7 @@ function FaqItemComponent({ faq, isOpen, onToggle }) {
         aria-expanded={isOpen}
         aria-controls={`faq-answer-${faq.id}`}
       >
-        <span className="text-2xl font-regular text-gray-900 pr-4">
+        <span className="lg:text-2xl font-regular text-gray-900 pr-4">
           {faq.question}
         </span>
         <div className="flex-shrink-0">
@@ -57,7 +57,7 @@ function FaqItemComponent({ faq, isOpen, onToggle }) {
 
       <div
         id={`faq-answer-${faq.id}`}
-        className={`transition-all duration-300 ease-in-out text-2xl  ${
+        className={`transition-all duration-300 ease-in-out text-base lg:text-2xl  ${
           isOpen ? 'max-h-96 opacity-100 ' : 'max-h-0 opacity-0'
         } overflow-hidden`}
       >
@@ -81,10 +81,10 @@ export default function Faqs() {
 
   return (
     <section className="h-full text-gray-800 flex justify-center pt-11">
-      <div className="w-full px-20 mx-auto">
+      <div className="w-full px-8 lg:px-20 mx-auto">
         <div className="flex flex-col text-center">
-        <h2 className="text-3xl font-bold">Got questions? <br />We've got answers.</h2>
-        <p className="text-2xl text-[#727272] my-12">We've gathered some of the most common questions our clients ask to help you get clarity before we even talk.</p>
+        <h2 className="text-lg lg:text-3xl font-bold">Got questions? <br />We've got answers.</h2>
+        <p className="text-base lg:text-2xl text-[#727272] my-4 lg:my-12">We've gathered some of the most common questions our clients ask to help you get clarity before we even talk.</p>
         </div>
 
         <div className="w-full mx-auto mb-18">
