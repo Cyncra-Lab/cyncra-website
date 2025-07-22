@@ -5,8 +5,8 @@ import frame1 from "../../../assets/images/Frame1.svg";
 
 export default function Testimonials() {
   return (
-    <section className="pt-20 text-[#0C120C] flex justify-center lg:h-[51.325rem]">
-      <div className="w-full px-8 lg:px-20 mx-auto">
+    <section className="pt-20 text-[#0C120C] flex justify-center h-auto lg:h-[51.325rem]">
+      <div className="w-full px-5 lg:px-20 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-center text-3xl lg:text-5xl font-bold mb-6">
             Trusted by Visionary Clients
@@ -163,7 +163,9 @@ export default function Testimonials() {
             ahead of <br /> schedule."
           </p>
           <p className="text-[#727272] text-xl lg:text-2xl leading-relaxed lg:w-[57.3125rem] mx-auto text-justify lg:hidden">
-            "Working with Cyncra felt like having an in-house tech team. They didn't just build our app, they challenged our thinking, improved the UX, and delivered ahead of schedule."
+            "Working with Cyncra felt like having an in-house tech team. They
+            didn't just build our app, they challenged our thinking, improved
+            the UX, and delivered ahead of schedule."
           </p>
         </div>
 

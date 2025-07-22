@@ -1,51 +1,59 @@
 "use client";
 
-import { useState } from 'react';
-import { FaPhone, FaGlobe, FaEnvelope, FaMapMarkerAlt, FaChevronDown } from 'react-icons/fa';
+import { useState } from "react";
+import {
+  FaPhone,
+  FaGlobe,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaChevronDown,
+} from "react-icons/fa";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    country: '',
-    email: '',
-    phoneNumber: '',
-    projectType: '',
-    budgetRange: '',
-    message: ''
+    fullName: "",
+    country: "",
+    email: "",
+    phoneNumber: "",
+    projectType: "",
+    budgetRange: "",
+    message: "",
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   return (
-    <section className="pt-20 text-[#0C120C] flex justify-center lg:h-[51.325rem]">
-      <div className="w-full mx-auto lg:px-20">
+    <section className="py-10 lg:py-20 text-[#0C120C] flex justify-center lg:h-[51.325rem]">
+      <div className="w-full mx-auto px-5 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
           {/* Left Column - Text Content */}
-          <div className="flex flex-col justify-center px-8 ">
+          <div className="flex flex-col justify-center lg:px-8 ">
             <div>
-              <h2 className="text-2xl lg:text-4xl text-black mb-4 lg:mb-10">
+              <h2 className="text-2xl lg:text-4xl text-center lg:text-left text-black mb-4 lg:mb-10">
                 Let's Create Something Great Together
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-10">
-                Got something in mind? We'd love to help you shape it into something amazing.
+                Got something in mind? We'd love to help you shape it into
+                something amazing.
               </p>
             </div>
 
             <div>
               <p className="text-base text-gray-700 mb-10">
-                Fill out the form or reach us directly, and someone from our team will get back to you shortly.
+                Fill out the form or reach us directly, and someone from our
+                team will get back to you shortly.
               </p>
             </div>
 
@@ -94,10 +102,10 @@ export default function Contact() {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-[#E6FAFC] p-8 rounded-2xl w-full">
+          <div className="bg-[#E6FAFC] p-4 lg:p-8 rounded-2xl w-full">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name and Country */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-lg text-[#02353C] mb-2">
                     Full Name
@@ -232,7 +240,7 @@ export default function Contact() {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="bg-[#02353c] text-white px-8 h-[55px] rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 cursor-pointer"
+                  className="bg-[#02353c] text-white px-8 h-[55px] w-full lg:w-auto rounded-lg font-medium hover:bg-[#119da4] transition-colors duration-300 cursor-pointer"
                 >
                   Submit Here
                 </button>

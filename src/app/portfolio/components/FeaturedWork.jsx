@@ -29,8 +29,8 @@ const portfolioData = [
 
 export default function FeaturedWork() {
   return (
-    <section className="min-h-screen pt-20 text-[#0C120C] flex justify-center">
-      <div className="w-full px-8 lg:px-20 mx-auto">
+    <section className="min-h-screen pt-10 lg:pt-20 text-[#0C120C] flex justify-center">
+      <div className="w-full px-5 lg:px-20 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-center text-2xl lg:text-3xl font-bold mb-6">
             Featured Work that Delivers Results
