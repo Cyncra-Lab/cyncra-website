@@ -15,7 +15,7 @@ export default function Mission() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center lg:justify-between lg:my-15 lg:gap-52 gap-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:my-15 lg:gap-52 gap-10">
             <Image
               src="/aboutImages/Frame-2147226945.webp"
               alt="Mission visual"

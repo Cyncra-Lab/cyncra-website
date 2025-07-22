@@ -12,7 +12,7 @@ export default function Vision() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center lg:justify-between lg:my-15 lg:gap-52 gap-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:my-15 lg:gap-52 gap-10">
             <Image
               src="/aboutImages/Frame 2147226968.webp"
               alt="Vision visual"
