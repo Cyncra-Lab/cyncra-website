@@ -36,7 +36,7 @@ const Services = () => {
   return (
     <div className="w-full min-h-svh">
       <section
-        className="h-[45vh] lg:h-[55vh] px-5 py-15 lg:px-20 lg:py-43"
+        className="h-[45vh] lg:h-[70vh] px-5 py-15 lg:px-20 lg:py-43"
         style={{
           background: "linear-gradient(to bottom, #023b43, #0595a9)",
         }}
