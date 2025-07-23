@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
   FaChevronDown,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -35,11 +36,21 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-10 lg:py-20 text-[#0C120C] flex justify-center lg:h-[51.325rem]">
+    <motion.section
+      className="py-10 lg:py-20 text-[#0C120C] flex justify-center lg:h-[51.325rem]"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="w-full mx-auto px-5 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
           {/* Left Column - Text Content */}
-          <div className="flex flex-col justify-center lg:px-8 ">
+          <motion.div
+            className="flex flex-col justify-center lg:px-8"
+            initial={{ x: -40, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <div>
               <h2 className="text-2xl lg:text-4xl text-center lg:text-left text-black mb-4 lg:mb-10">
                 Let's Create Something Great Together
@@ -99,10 +110,15 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column - Form */}
-          <div className="bg-[#E6FAFC] p-4 lg:p-8 rounded-2xl w-full">
+          <motion.div
+            className="bg-[#E6FAFC] p-4 lg:p-8 rounded-2xl w-full"
+            initial={{ x: 40, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name and Country */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -246,9 +262,9 @@ export default function Contact() {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

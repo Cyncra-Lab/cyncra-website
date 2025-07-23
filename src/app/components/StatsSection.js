@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const STATS = [
   {
     value: "150+",
@@ -19,12 +21,36 @@ const STATS = [
   },
 ];
 
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
 export default function StatsSection() {
   return (
     <section className="h-auto">
-      <div className="grid gap-10 py-4 lg:py-6 px-0 lg:px-4 text-center grid-cols-2 md:grid-cols-4 ">
+      <motion.div
+        className="grid gap-10 py-4 lg:py-6 px-0 lg:px-4 text-center grid-cols-2 md:grid-cols-4"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {STATS.map(({ value, lines }) => (
-          <div key={value}>
+          <motion.div key={value} variants={fadeUp}>
             <p className="text-xl lg:text-3xl font-bold text-text md:text-6xl ">
               {value}
             </p>
@@ -33,9 +59,9 @@ export default function StatsSection() {
                 <p key={l}>{l}</p>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

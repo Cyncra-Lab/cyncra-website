@@ -1,14 +1,20 @@
-import React from "react";
-import {
-  CheckCircle,
-  Brain,
-  Palette,
-  Code,
-  Rocket,
-  Compass,
-  Laptop,
-} from "lucide-react";
+import React, { useRef } from "react";
+import { Brain, Palette, Rocket, Compass, Laptop } from "lucide-react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay,
+    },
+  }),
+};
 
 const HowItWorks = () => {
   const leftSteps = [
@@ -58,15 +64,23 @@ const HowItWorks = () => {
     },
   ];
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="bg-white py-10 lg:py-20 px-0 lg:px-6 w-full">
+    <section ref={ref} className="bg-white py-10 lg:py-20 px-0 lg:px-6 w-full">
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-42 items-start">
         {/* Left Side */}
         <div className="space-y-13">
           {leftSteps.map((step, index) => (
-            <div key={index} className="flex flex-col gap-4 w-full">
-              {/* Number Circle */}
-
+            <motion.div
+              key={index}
+              className="flex flex-col gap-4 w-full"
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              custom={index * 0.2}
+            >
               <div className="flex-shrink-0 flex items-center justify-normal gap-3">
                 {step.number !== "00" && (
                   <div className="w-8 h-8 border border-black/50 rounded-full flex items-center justify-center">
@@ -91,12 +105,18 @@ const HowItWorks = () => {
                   {step.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Right Side: Image + Remaining Steps */}
-        <div className="space-y-10">
+        <motion.div
+          className="space-y-10"
+          variants={fadeUp}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          custom={0.4}
+        >
           <div className="w-full h-60 lg:h-100 rounded-xl">
             <Image
               src="/howItWorks.svg"
@@ -110,7 +130,14 @@ const HowItWorks = () => {
           {/* Steps 04 and 05 */}
           <div className="space-y-13">
             {rightSteps.map((step, index) => (
-              <div key={index} className="flex flex-col gap-4 w-full">
+              <motion.div
+                key={index}
+                className="flex flex-col gap-4 w-full"
+                variants={fadeUp}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                custom={(index + 5) * 0.2}
+              >
                 {/* Number Circle */}
                 <div className="flex-shrink-0 flex items-center justify-normal gap-3">
                   <div className="w-8 h-8 border border-black/50 rounded-full flex items-center justify-center">
@@ -132,12 +159,12 @@ const HowItWorks = () => {
                     {step.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

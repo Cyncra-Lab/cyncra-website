@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaEnvelope,
   FaGlobe,
@@ -7,14 +8,23 @@ import {
   FaPhone,
   FaPhoneAlt,
 } from "react-icons/fa";
-// import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe} from "react-icons/fa";
 
 export default function ContactInfoForm() {
   return (
     <section className="py-10 bg-white text-[#042F2E]">
-      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-[20%] items-start">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-[20%] items-start"
+      >
         {/*left row */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-2xl lg:text-3xl text-center lg:text-left font-bold mb-4 lg:mb-6">
             We are here to help
           </h2>
@@ -78,10 +88,16 @@ export default function ContactInfoForm() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/*Right row*/}
-        <div className="">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className=""
+        >
           <h2 className="text-lg lg:text-2xl text-[#3F3E3E] leading-[1.3] mb-8">
             Fill out the form or reach us directly, and someone from our team
             will get back to you shortly
@@ -131,8 +147,8 @@ export default function ContactInfoForm() {
               Submit Here
             </button>
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

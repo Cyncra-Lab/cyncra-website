@@ -23,7 +23,7 @@ export default function MobileMenu({ open, onClose }) {
 
           {/* drawer */}
           <motion.aside
-            className="fixed right-0 z-50 w-full h-[60vh] bg-surface p-6 md:hidden border-l border-accent-2/40"
+            className="fixed right-0 z-50 w-full h-[60vh] bg-white p-6 md:hidden border-l border-accent-2/40"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}

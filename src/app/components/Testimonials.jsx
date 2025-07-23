@@ -1,154 +1,92 @@
 "use client";
 import Image from "next/image";
-import { MdOutlineRocketLaunch } from "react-icons/md";
+import { motion } from "framer-motion";
 
 export default function Testimonials() {
   return (
     <section className="p-5 lg:p-20 text-[#0C120C] flex justify-center h-auto">
       <div className="w-full px-0 lg:px-20 mx-auto">
-        <div className="text-center mb-10 lg:mb-16">
+        <motion.div
+          className="text-center mb-10 lg:mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-center text-2xl lg:text-5xl font-bold mb-2">
             Testimonials
           </h2>
           <p className="text-xl lg:text-2xl text-[#727272] font-regular mb-11 tracking-wider leading-[1.4]">
             Hear what Our Clients are saying about us
           </p>
-        </div>
+        </motion.div>
 
         {/* Client Images Grid */}
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 mb-12 w-full">
+        <motion.div
+          className="flex flex-col lg:flex-row justify-center items-center gap-8 mb-12 w-full"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           {/* Left group - 2x2 grid */}
+
           <div className="grid grid-cols-2 gap-6">
-            <div className="w-25 h-25 rounded-2xl">
+            {["Frame1", "Frame3", "Frame2", "Frame4"].map((frame, i) => (
               <Image
-                src="/images/Frame1.svg"
-                alt="Client 1"
+                key={i}
+                src={`/images/${frame}.svg`}
+                alt={`Client ${i + 1}`}
                 width={100}
                 height={100}
-                className="w-full h-full object-cover"
+                className="w-25 h-25 rounded-2xl object-cover"
               />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame3.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame2.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame4.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            ))}
           </div>
 
           {/* Center group - 3 */}
+
           <div className="flex flex-col lg:flex-row items-center gap-6">
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame5.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame6.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-41 h-41 rounded-2xl">
-              <Image
-                src="/images/Frame7.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame8.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame9.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {["Frame5", "Frame6", "Frame7", "Frame8", "Frame9"].map(
+              (frame, i) => (
+                <Image
+                  key={i}
+                  src={`/images/${frame}.svg`}
+                  alt={`Client ${i + 5}`}
+                  width={100}
+                  height={100}
+                  className={`rounded-2xl object-cover ${
+                    frame === "Frame7" ? "w-41 h-41" : "w-25 h-25"
+                  }`}
+                />
+              )
+            )}
           </div>
 
           {/* Right group - 2x2 grid */}
+
           <div className="grid grid-cols-2 gap-6">
-            <div className="w-25 h-25 rounded-2xl">
+            {["Frame10", "Frame12", "Frame11", "Frame13"].map((frame, i) => (
               <Image
-                src="/images/Frame10.svg"
-                alt="Client 1"
+                key={i}
+                src={`/images/${frame}.svg`}
+                alt={`Client ${i + 10}`}
                 width={100}
                 height={100}
-                className="w-full h-full object-cover"
+                className="w-25 h-25 rounded-2xl object-cover"
               />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame12.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame11.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-25 h-25 rounded-2xl">
-              <Image
-                src="/images/Frame13.svg"
-                alt="Client 1"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Testimonial */}
-        <div className="text-center mb-12">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-xl lg:text-2xl font-bold mb-2">
             Tobi Bamidele, Founder, QuickCart NG
           </h3>
@@ -157,10 +95,16 @@ export default function Testimonials() {
             didn't just build our app, they challenged our thinking, improved
             the UX, and delivered ahead of schedule."
           </p>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="text-center flex flex-col items-center justify-center gap-2">
+        <motion.div
+          className="text-center flex flex-col items-center justify-center gap-2"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
           <h1 className="font-bold mb-6 text-xl lg:text-2xl">
             Ready to bring your digital ideas to life?
           </h1>
@@ -171,7 +115,7 @@ export default function Testimonials() {
             Book a Free Call{" "}
             <Image src="/call.svg" width={24} height={24} alt="call" />
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
