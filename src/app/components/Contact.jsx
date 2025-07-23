@@ -46,7 +46,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
           {/* Left Column - Text Content */}
           <motion.div
-            className="flex flex-col justify-start items-start pr-0 lg:pr-20"
+            className="flex flex-col justify-start items-start pr-0 2xl:pr-20"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
