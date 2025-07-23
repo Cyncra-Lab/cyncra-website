@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function ContactHero() {
-  return (
+  return ( 
     <section
       className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center rounded-3xl mb-8 lg:mb-11 px-5 lg:px-11 py-7 lg:py-28"
       style={{
@@ -21,5 +22,4 @@ export default function ContactHero() {
         <p className="text-lg lg:text-2xl">We want to hear from you</p>
       </div>
     </section>
-  );
-}
+   

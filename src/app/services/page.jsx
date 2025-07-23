@@ -1,6 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { title } from "process";
-import React from "react";
+import { motion } from "framer-motion";
 import HowItWorks from "../components/HowItWorks";
 import Amazing from "../components/Amazing";
 import Contact from "../components/Contact";
@@ -41,7 +42,13 @@ const Services = () => {
           background: "linear-gradient(to bottom, #023b43, #0595a9)",
         }}
       >
-        <div className="w-full lg:w-151 text-white">
+        <motion.div
+          className="w-full lg:w-151 text-white"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h1 className="font-bold text-3xl lg:text-4xl text-center lg:text-left leading-[1.4] tracking-tight mb-8">
             Digital Solutions, Designed to Deliver
           </h1>
@@ -50,15 +57,28 @@ const Services = () => {
             experiences that help businesses grow, scale, and stand out in a
             crowded market.
           </p>
-        </div>
+        </motion.div>
       </section>
-      <section className="py-11 px-5 lg:px-20 flex flex-col items-center w-full">
-        <h2 className="text-3xl lg:text-4xl text-center lg:text-left font-bold mb-15 lg:mb-20">
+      <motion.section
+        className="py-11 px-5 lg:px-20 flex flex-col items-center w-full"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <motion.h2 className="text-3xl lg:text-4xl text-center lg:text-left font-bold mb-15 lg:mb-20">
           Our Services Includes
-        </h2>
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-5 lg:gap-x-10 gap-y-8 lg:gap-y-11 w-full">
           {services.map((service, idx) => (
-            <div key={idx} className="w-full h-96 lg:h-120">
+            <motion.div
+              key={idx}
+              className="w-full h-96 lg:h-120"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true }}
+            >
               <Image
                 src={service.img}
                 alt={service.title}
@@ -69,14 +89,20 @@ const Services = () => {
               <h3 className="h-1/4 py-6 px-9 text-center font-bold text-2xl lg:text-3xl">
                 {service.title}
               </h3>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
       <section className="py-11 lg:py-22 px-5 lg:px-20 flex flex-col items-center">
-        <h2 className="text-3xl lg:text-4xl font-bold mb-8 lg:mb-15">
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-3xl lg:text-4xl font-bold mb-8 lg:mb-15"
+        >
           HOW IT WORKS
-        </h2>
+        </motion.h2>
         <HowItWorks />
       </section>
       <Amazing />

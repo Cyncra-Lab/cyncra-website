@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
   FaChevronDown,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -35,11 +36,22 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-11 lg:py-22 text-[#0C120C] flex justify-center h-auto">
+    <motion.section
+      className="py-11 lg:py-22 text-[#0C120C] flex justify-center h-auto"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="w-full mx-auto px-5 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
           {/* Left Column - Text Content */}
-          <div className="flex flex-col justify-start items-start pr-0 lg:pr-20">
+          <motion.div
+            className="flex flex-col justify-start items-start pr-0 2xl:pr-20"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div>
               <h2 className="text-3xl text-center lg:text-left text-black mb-10 lg:mb-20 font-bold">
                 Let’s Build Something Great Together
@@ -53,7 +65,13 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-              <div className="flex flex-col items-start lg:items-start space-x-3 space-y-5 lg:space-y-9">
+              <motion.div
+                className="flex flex-col items-start lg:items-start space-x-3 space-y-5 lg:space-y-9"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 <div className=" text-gray-600 flex items-center justify-normal gap-x-4 mb-4">
                   <FaPhone className="w-4 h-4 rotate-90" />
                   <p className="text-[#0C120C]">Phone Number</p>
@@ -65,9 +83,15 @@ export default function Contact() {
                 >
                   +234012345789
                 </a>
-              </div>
+              </motion.div>
 
-              <div className="flex flex-col items-start lg:items-end space-x-3">
+              <motion.div
+                className="flex flex-col items-start lg:items-end space-x-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 <div className="flex items-center justify-normal gap-x-4 text-gray-600 mb-4">
                   <FaGlobe className="w-4 h-4 object-cover" />
                   <p className=" text-[#0C120C]">Website</p>
@@ -79,9 +103,15 @@ export default function Contact() {
                 >
                   www.cyncra.com
                 </a>
-              </div>
+              </motion.div>
 
-              <div className="flex flex-col items-start space-x-3">
+              <motion.div
+                className="flex flex-col items-start space-x-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
                 <div className="flex items-center justify-normal gap-x-4 text-gray-600 mb-4">
                   <FaEnvelope className="w-4 h-4 object-cover" />
                   <p className=" text-[#0C120C]">Email Address</p>
@@ -93,9 +123,15 @@ export default function Contact() {
                 >
                   www.cyncra.tech@gmail.com
                 </a>
-              </div>
+              </motion.div>
 
-              <div className="flex flex-col items-start lg:items-end space-x-3">
+              <motion.div
+                className="flex flex-col items-start lg:items-end space-x-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
                 <div className="flex items-center justify-normal gap-x-4 text-gray-600 mb-4">
                   <FaMapMarkerAlt className="w-4 h-4 object-cover" />
                   <p className="text-[#0C120C]">Office Address</p>
@@ -105,12 +141,18 @@ export default function Contact() {
                     Yaba, Lagos, Nigeria
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column - Form */}
-          <div className="w-full">
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h4 className="text-xl lg:text-2xl mb-8 w-full lg:w-3/4">
               Fill out the form or reach us directly, and someone from our team
               will get back to you shortly
@@ -261,9 +303,9 @@ export default function Contact() {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

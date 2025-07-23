@@ -1,28 +1,42 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-full !h-[calc(70vh-60px)]  lg:!h-[calc(70vh-60px)] overflow-hidden">
-      <div
-        className="absolute top-0 border h-full inset-0 bg-cover bg-center filter blur-[1px] scale-110"
-        style={{
-          backgroundImage: `url("/portfolioImages/Frame 2147227010.png")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+    <section className="relative w-full !h-[calc(60vh-60px)]  lg:!h-[calc(70vh-60px)] overflow-hidden">
+      <motion.div
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1.1, opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="absolute top-0 inset-0 h-full w-full bg-cover bg-center scale-110 filter blur-[1px] 
+             bg-[url('/portfolioImages/Frame_2147227010.png')] 
+             sm:bg-center 
+             md:bg-top 
+             lg:bg-center"
       />
-      <div className="absolute inset-0  left-0 w-full h-full bg-gradient-to-r from-black via-[#292929]/40 to-transparent backdrop-blur-xs z-0 lg:z-10" />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
+        className="absolute inset-0  left-0 w-full h-full bg-gradient-to-r from-black via-[#292929]/40 to-transparent backdrop-blur-xs z-0 lg:z-10"
+      />
 
-      <div className="relative z-10 w-full h-full flex flex-col items-center lg:items-start justify-start py-11 lg:justify-center px-5 lg:px-20 text-white ">
-        <h2 className="font-bold text-3xl lg:text-5xl mb-6">
+      <motion.div
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+        className="relative z-10 w-full h-full flex flex-col items-center lg:items-start justify-center py-11 lg:justify-center px-5 lg:px-20 text-white "
+      >
+        <h2 className="font-bold text-4xl lg:text-5xl mb-6 ">
           Our Work Speaks for itself
         </h2>
 
         <p className="font-regular text-[#AEAEAE] text-base lg:text-2xl leading-relaxed">
-          At Cyncra, we turn ideas into digital excellence. Discover <br />
-          our top achievements, crafted with precision and purpose
+          At Cyncra, we turn ideas into digital excellence.
+          <br /> Discover our top achievements, crafted with precision and
+          purpose
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 }

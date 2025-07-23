@@ -3,12 +3,37 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
+
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -50 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 50 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function AboutSection() {
   return (
     <section className="p-5 lg:p-20 w-full">
       <div className="grid items-start gap-y-10 lg:gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-5 w-full h-auto lg:h-[441px]">
-        <div className="col-span-2 overflow-hidden h-full order-2 md:order-1">
+        <motion.div
+          className="col-span-2 overflow-hidden h-full order-2 md:order-1"
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <Image
             src="/image/about.svg"
             alt="Team collaborating over a laptop"
@@ -17,9 +42,15 @@ export default function AboutSection() {
             className="h-full w-full object-cover rounded-xl lg:rounded-3xl"
             priority
           />
-        </div>
+        </motion.div>
 
-        <div className="col-span-3 flex h-full flex-col py-1 order-1 md:order-2">
+        <motion.div
+          className="col-span-3 flex h-full flex-col py-1 order-1 md:order-2"
+          variants={fadeInRight}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <h2 className="mb-5 lg:mb-11 text-2xl font-bold text-text lg:text-3xl">
             About Cyncra
           </h2>
@@ -42,7 +73,7 @@ export default function AboutSection() {
             Explore Our Services
             <Icon icon="ic:round-arrow-right-alt" width="18" height="18" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
