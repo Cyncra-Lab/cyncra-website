@@ -43,7 +43,7 @@ export default function Contact() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="w-full mx-auto px-5 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-32">
           {/* Left Column - Text Content */}
           <motion.div
             className="flex flex-col justify-start items-start pr-0 2xl:pr-20"
