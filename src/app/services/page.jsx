@@ -37,9 +37,10 @@ const Services = () => {
   return (
     <div className="w-full overflow-x-hidden">
       <section
-        className="min-h-[45vh] lg:min-h-[70vh] px-5 py-15 lg:px-20 lg:py-43"
+        className="min-h-[45vh] lg:min-h-[70vh] px-5 py-15 lg:px-20 lg:py-43  bg-cover bg-center"
         style={{
-          background: "linear-gradient(to bottom, #023b43, #0595a9)",
+          // backgroundImage: "url('/service.svg')",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/service.svg')`,
         }}
       >
         <motion.div
