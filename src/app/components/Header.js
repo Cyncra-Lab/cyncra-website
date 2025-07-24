@@ -17,7 +17,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <section className="sticky top-0 z-50 w-full bg-surface backdrop-blur-sm shadow">
+    <section className="fixed top-0 z-50 w-full bg-surface backdrop-blur-sm shadow">
       <nav className="flex items-center justify-between lg:px-20 py-3 !md:py-5 !lg:py-6 px-2">
         <Logo />
 

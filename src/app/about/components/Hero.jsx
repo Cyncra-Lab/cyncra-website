@@ -8,7 +8,7 @@ const textVariant = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.4, ease: "easeOut" },
   },
 };
 
@@ -65,8 +65,7 @@ export default function Hero() {
             className="w-full h-[350px] flex items-center justify-center"
             variants={imageContainerVariant}
             initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
+            animate="show"
           >
             <div className="w-full">
               {/* Responsive Image Gallery */}
@@ -81,6 +80,7 @@ export default function Hero() {
                   <motion.div
                     key={index}
                     className="w-full"
+                    layout
                     variants={imageVariant}
                   >
                     <Image
@@ -88,6 +88,7 @@ export default function Hero() {
                       alt={`Image ${index + 1}`}
                       width={300}
                       height={300}
+                      loading="lazy"
                       className="w-full object-cover rounded-3xl hover:shadow-xl transition-shadow duration-300"
                     />
                   </motion.div>

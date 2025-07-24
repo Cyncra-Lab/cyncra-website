@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={oxygen.className}>
       <body className="flex min-h-screen flex-col bg-background text-text antialiased">
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pt-15">{children}</main>
         <Footer />
       </body>
     </html>

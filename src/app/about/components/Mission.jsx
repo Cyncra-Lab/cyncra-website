@@ -109,7 +109,7 @@ export default function Mission() {
               <span className="text-2xl lg:text-6xl font-bold text-[#C0BFBF] mb-4">
                 {item.id}
               </span>
-              <h3 className="font-bold lg:text-2xl">{item.title}</h3>
+              <h3 className="font-bold text-xl lg:text-3xl">{item.title}</h3>
               <p className="text-base lg:text-2xl text-[#727272]">
                 {item.description}
               </p>

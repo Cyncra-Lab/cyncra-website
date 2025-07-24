@@ -8,7 +8,7 @@ import Head from "next/head";
 
 export default function ContactPage() {
   return (
-    <div className="lg:py-11 py-7 px-5 lg:px-20">
+    <div className="lg:py-11 py-7 px-5 lg:px-20 overflow-x-hidden">
       <Head>
         <title>
           Cyncra Technologies -- Contact Us for Expert Tech Support & Services

@@ -58,6 +58,7 @@ export default function Testimonials() {
                   alt={`Client ${n}`}
                   width={100}
                   height={100}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -81,6 +82,7 @@ export default function Testimonials() {
                   alt={`Client ${n}`}
                   width={100}
                   height={100}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -100,6 +102,7 @@ export default function Testimonials() {
                   alt={`Client ${n}`}
                   width={100}
                   height={100}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -108,7 +111,7 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Testimonial */}
-        <motion.div className="text-center mb-12" variants={item}>
+        <motion.div className="text-center mb-12" variants={item} animate>
           <h3 className="text-2xl font-bold mb-2">
             Tobi Bamidele, Founder, QuickCart NG
           </h3>

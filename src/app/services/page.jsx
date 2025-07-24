@@ -35,9 +35,9 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="w-full min-h-svh">
+    <div className="w-full overflow-x-hidden">
       <section
-        className="h-[45vh] lg:h-[70vh] px-5 py-15 lg:px-20 lg:py-43"
+        className="min-h-[45vh] lg:min-h-[70vh] px-5 py-15 lg:px-20 lg:py-43"
         style={{
           background: "linear-gradient(to bottom, #023b43, #0595a9)",
         }}
@@ -45,7 +45,7 @@ const Services = () => {
         <motion.div
           className="w-full lg:w-151 text-white"
           initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
@@ -62,7 +62,7 @@ const Services = () => {
       <motion.section
         className="py-11 px-5 lg:px-20 flex flex-col items-center w-full"
         initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
@@ -74,16 +74,18 @@ const Services = () => {
             <motion.div
               key={idx}
               className="w-full h-96 lg:h-120"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
+              layout
             >
               <Image
                 src={service.img}
                 alt={service.title}
                 width={100}
                 height={100}
+                loading="lazy"
                 className="w-full h-3/4 object-cover rounded-3xl"
               />
               <h3 className="h-1/4 py-6 px-9 text-center font-bold text-2xl lg:text-3xl">

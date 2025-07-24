@@ -33,15 +33,15 @@ export default function FeaturedWork() {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="min-h-screen pt-10 lg:pt-20 text-[#0C120C] flex justify-center"
+      transition={{ duration: 0.3 }}
+      className="min-h-screen pt-10 lg:pt-20 text-[#0C120C] flex justify-center overflow-x-hidden"
     >
       <div className="w-full px-5 lg:px-20 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-16"
         >
           <h2 className="text-center text-2xl lg:text-3xl font-bold mb-6">

@@ -68,7 +68,7 @@ export default function HeroSection() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="w-full"
+                className="w-full lg:w-auto"
               >
                 <Link
                   href="/contact"
@@ -86,7 +86,7 @@ export default function HeroSection() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="w-full"
+                className="w-full lg:w-auto"
               >
                 <Link
                   href="/services"
