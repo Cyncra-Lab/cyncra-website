@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS } from "../data/navData";
+import { navLinks } from "../data/navData";
 
 export default function MobileMenu({ open, onClose }) {
   const pathname = usePathname();
@@ -23,14 +23,14 @@ export default function MobileMenu({ open, onClose }) {
 
           {/* drawer */}
           <motion.aside
-            className="fixed  right-0 z-50 w-[75vw] max-w-xs bg-surface p-6 md:hidden border-l border-accent-2/40"
+            className="fixed right-0 z-50 w-full h-[60vh] bg-white p-6 md:hidden border-l border-accent-2/40"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 260, damping: 25 }}
           >
-            <ul className="space-y-6">
-              {NAV_LINKS.map(({ href, label }) => {
+            <ul className="space-y-12">
+              {navLinks.map(({ href, label }) => {
                 const isActive = pathname === href;
                 return (
                   <motion.li
@@ -41,7 +41,7 @@ export default function MobileMenu({ open, onClose }) {
                     <Link
                       href={href}
                       onClick={onClose}
-                      className={`block text-lg font-medium transition-colors ${
+                      className={`block text-center text-lg font-medium transition-colors ${
                         isActive
                           ? "text-accent-2"
                           : "text-text hover:text-shadow-accent-2"
@@ -57,9 +57,9 @@ export default function MobileMenu({ open, onClose }) {
                 <Link
                   href="/contact"
                   onClick={onClose}
-                  className="block rounded-full bg-accent-2 px-5 py-3 text-center font-semibold text-white hover:opacity-90 transition"
+                  className="flex justify-center items-center rounded-full bg-accent-2 px-5 py-3 h-14 text-center font-bold text-white hover:opacity-90 transition"
                 >
-                  Contact&nbsp;Us
+                  Contact Us
                 </Link>
               </motion.li>
             </ul>
